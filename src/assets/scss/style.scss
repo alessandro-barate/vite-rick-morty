@@ -1,3 +1,10 @@
 /**************
 Index SASS
 **************/
+
+@use "./_partials/general" as *;
+@use "./_partials/reset" as *;
+@use "./_partials/typography" as *;
+@use "./_partials/utility" as *;
+@use "./_partials/variables" as *;
+
