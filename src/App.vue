@@ -1,6 +1,7 @@
 <script>
 import MainComponent from './components/MainComponent.vue';
 import { store } from './store.js';
+import axios from 'axios';
 export default {
     name: 'RickMorthyApp',
     components: {
@@ -16,7 +17,10 @@ data(){
 created(){
     console.log('chiamata api');
 
-    axios.get(store.apiUrl).then(response => console.log('ciao'));
+    axios.get(this.store.apiUrl).then(response => {
+        this.store.results = response.results;
+});
+    console.log(this.store.results);
     },
 };
 </script>
