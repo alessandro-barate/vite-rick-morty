@@ -41,10 +41,12 @@ button {
     border: none;
 }
 
+.padding-b {
+    padding-bottom: 5px;
+}
+
 .cards-container {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 40px;
 }
 

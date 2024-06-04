@@ -14,7 +14,7 @@ export default {
 
 <template>
     <main>
-        <div class="container">
+        <div class="container" v-cloak>
             <div class="row">
                 <div class="col">
                     <h1 class="title">Rick and Morthy App</h1>
