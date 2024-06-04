@@ -10,14 +10,20 @@ data(){
     }
 },
 
-created(){
-    axios.get(this.store.apiUrl).then((response) => {
+methods: {
+    searchCard(){
+        axios.get(this.store.info.url + this.store.info.endpoints.characters).then((response) => {
         this.store.apiResults = response.data.results;
         this.store.info = response.data.info;
         console.log(response);
         console.log(this.store.apiResults);
         console.log(this.store.info);
     });
+    }
+},
+
+created(){
+    this.searchCard();
     
     },
 };
