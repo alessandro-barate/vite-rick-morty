@@ -13,8 +13,10 @@ data(){
 created(){
     axios.get(this.store.apiUrl).then((response) => {
         this.store.apiResults = response.data.results;
+        this.store.info = response.data.info;
         console.log(response);
         console.log(this.store.apiResults);
+        console.log(this.store.info);
     });
     
     },
