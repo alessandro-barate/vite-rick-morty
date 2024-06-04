@@ -26,3 +26,32 @@ button {
     border: none;
 }
 
+.cards-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    width: calc(100% / 4);
+    margin-bottom: 70px;
+}
+
+img {
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.style {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.found-characters {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+

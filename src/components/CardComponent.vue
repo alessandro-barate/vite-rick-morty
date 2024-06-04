@@ -24,8 +24,8 @@ created(){
 <template>
     <div class="cards-container">
         <div v-for="(character, id) in store.apiResults" :key="id" class="card">
-            <img :src="character.image" alt="">
-            <p>{{ character.name }}</p>
+            <img :src="character.image" :alt="character.name">
+            <p class="style">{{ character.name }}</p>
             <p>{{ character.status }}</p>
             <p>{{ character.species }}</p>
         </div>

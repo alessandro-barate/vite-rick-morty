@@ -5,5 +5,5 @@ export default {
 </script>
 
 <template>
-    <div>risultati trovai</div>
+    <h2 class="found-characters">Found -- characters</h2>
 </template>
