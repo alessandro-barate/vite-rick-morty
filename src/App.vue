@@ -17,10 +17,10 @@ data(){
 created(){
     console.log('chiamata api');
 
-    axios.get(this.store.apiUrl).then(response => {
-        this.store.results = response.results;
-});
-    console.log(this.store.results);
+    axios.get(this.store.apiUrl).then((response) => {
+        this.store.apiResults = response.results;
+    });
+    
     },
 };
 </script>
