@@ -1,6 +1,12 @@
 <script>
+import CardComponent from "CardComponent.vue";
+import FoundComponent from "FoundComponent.vue";
 export default {
-    name: "MainComponent",
+    name: 'MainComponent',
+    components: {
+        CardComponent,
+        FoundComponent,
+    },
 };
 </script>
 
@@ -21,9 +27,7 @@ export default {
                         <button class="margin-lr padding border-radius bg-blue">Search</button>
                         <button class="margin-lr padding border-radius bg-gold">Reset</button>
                     </div>
-                    <div class="card">
-                        <img src="" alt="">
-                    </div>
+                    
                 </div>
             </div>
         </div>
