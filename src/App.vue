@@ -6,6 +6,11 @@ export default {
     components: {
         MainComponent,
     },
+    created(){
+        console.log('chiamata api');
+
+        axios.get()
+    }
 };
 </script>
 <template>
