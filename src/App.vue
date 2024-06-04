@@ -6,11 +6,18 @@ export default {
     components: {
         MainComponent,
     },
-    created(){
-        console.log('chiamata api');
 
-        axios.get()
+data(){
+    return {
+        store,
     }
+},
+
+created(){
+    console.log('chiamata api');
+
+    axios.get(store.apiUrl).then(response => console.log('ciao'));
+    },
 };
 </script>
 <template>
