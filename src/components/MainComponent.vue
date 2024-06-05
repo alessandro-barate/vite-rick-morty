@@ -21,11 +21,23 @@ export default {
     methods: {
 
         getCharacters(){
+            this.store.loading = true;
+
+            const params = {
+                name: this.store.inputName,
+                status: this.store.searchKey,
+            }
+
+            if (this.store.search) {
+                
+            }
+            
             console.log(this.store.info);
             axios.get(this.store.endpoints.base + this.store.endpoints.character).then((response) => {
             this.store.apiCharacters = response.data.results;
             console.log(this.store.apiCharacters);
         });
+        this.store.loading = false;
         },
 
     },
