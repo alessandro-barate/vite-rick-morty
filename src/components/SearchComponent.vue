@@ -14,7 +14,7 @@ export default {
 <template>
     <div class="search-bar">
         <input type="text" placeholder="Search character" class="margin-lr padding border-radius">
-        <select name="character-status" id="character-status" class="margin-lr border-radius" @change="getCharacters" v-model="store.searchKey">
+        <select name="character-status" id="character-status" class="margin-lr border-radius" @change="$emit('search')" v-model="store.searchKey">
             <option selected value="">Select Status</option>
             <option value="alive">Alive</option>
             <option value="dead">Dead</option>

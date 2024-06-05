@@ -41,7 +41,7 @@ export default {
             <div class="row">
                 <div class="col">
                     <h1 class="title">Rick and Morthy App</h1>
-                    <SearchComponent @getCharacters="getCharacters"/>
+                    <SearchComponent @search="getCharacters"/>
                     <CardComponent/>
                     <FoundComponent/>
                 </div>
