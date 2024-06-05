@@ -14,7 +14,7 @@ methods: {
     searchCard(){
         this.store.loading = true;
 
-        axios.get(this.store.info.url + this.store.info.endpoints.characters).then((response) => {
+        axios.get(this.store.endpoints.base + this.store.endpoints.character).then((response) => {
         this.store.apiResults = response.data.results;
         this.store.info = response.data.info;
 
@@ -24,13 +24,13 @@ methods: {
         //  console.log(this.store.apiResults);
         // console.log(this.store.info);
     });
-    }
+    },
 },
 
 created(){
-    this.searchCard();
-    
-    },
+    this.searchCard()
+        // console.log(this.store.info);
+},
 };
 </script>
 

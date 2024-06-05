@@ -5,10 +5,9 @@ export const store = reactive({
     apiCharacters: [],
     loading: true,
     searchKey: '',
-    info: {
-        url: 'https://rickandmortyapi.com/api/',
-        endpoints: {
-            characters: 'character',
-        }
+    info: {},
+    endpoints: {
+        base: 'https://rickandmortyapi.com/api/',
+        character: 'character'
     }
 });

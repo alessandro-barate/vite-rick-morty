@@ -21,17 +21,14 @@ export default {
     methods: {
 
         getCharacters(){
-            axios.get(this.store.info.url + this.store.info.endpoints.characters).then((response) => {
+            console.log(this.store.info);
+            axios.get(this.store.endpoints.base + this.store.endpoints.character).then((response) => {
             this.store.apiCharacters = response.data.results;
             console.log(this.store.apiCharacters);
         });
         },
 
     },
-
-    // created(){
-    //     this.getCharacters();
-    // }
 };
 </script>
 
