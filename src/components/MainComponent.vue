@@ -22,16 +22,16 @@ export default {
 
         getCharacters(){
             axios.get(this.store.info.url + this.store.info.endpoints.characters).then((response) => {
-            this.store.apiResults = response.data.results;
-            console.log(this.store.apiResults);
+            this.store.apiCharacters = response.data.results;
+            console.log(this.store.apiCharacters);
         });
         },
 
     },
 
-    created(){
-        this.getCharacters();
-    }
+    // created(){
+    //     this.getCharacters();
+    // }
 };
 </script>
 
@@ -41,7 +41,7 @@ export default {
             <div class="row">
                 <div class="col">
                     <h1 class="title">Rick and Morthy App</h1>
-                    <SearchComponent @search="getCharacters"/>
+                    <SearchComponent @getCharacters="getCharacters"/>
                     <CardComponent/>
                     <FoundComponent/>
                 </div>
