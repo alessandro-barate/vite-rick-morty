@@ -2,6 +2,8 @@
 import CardComponent from "../components/CardComponent.vue";
 import FoundComponent from "../components/FoundComponent.vue";
 import SearchComponent from "../components/SearchComponent.vue";
+import axios from 'axios';
+import { store } from '../store.js';
 export default {
     name: 'MainComponent',
     components: {
@@ -10,11 +12,26 @@ export default {
         SearchComponent,
     },
 
-methods: {
-    search(){
-        console.log('ciao');
+    data(){
+        return {
+            store,
+        };
     },
-},
+
+    methods: {
+
+        getCharacters(){
+            axios.get(this.store.info.url + this.store.info.endpoints.characters).then((response) => {
+            this.store.apiResults = response.data.results;
+            console.log(this.store.apiResults);
+        });
+        },
+
+    },
+
+    created(){
+        this.getCharacters();
+    }
 };
 </script>
 
@@ -24,7 +41,7 @@ methods: {
             <div class="row">
                 <div class="col">
                     <h1 class="title">Rick and Morthy App</h1>
-                    <SearchComponent @getCharacters="getCharacters"/>
+                    <SearchComponent @search="getCharacters"/>
                     <CardComponent/>
                     <FoundComponent/>
                 </div>

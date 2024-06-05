@@ -1,38 +1,20 @@
 <script>
 import { store } from '../store.js';
-import axios from 'axios';
 export default {
     name: 'SearchComponent',
 
-data(){
+    data(){
     return {
         store,
     };
 },
-
-methods: {
-    getCharacters(){
-        axios.get(this.store.info.url + this.store.info.endpoints.characters).then((response) => {
-        this.store.apiResults = response.data.results;
-        console.log(this.store.apiResults);
-    });
-    },
-},
-
-// search(){
-//     console.log('selezione status');
-// },
-
-created(){
-    this.getCharacters();
-}
 };
 </script>
 
 <template>
     <div class="search-bar">
         <input type="text" placeholder="Search character" class="margin-lr padding border-radius">
-        <select name="character-status" id="character-status" class="margin-lr border-radius" @change="$emit(getCharacters)" v-model="store.searchKey">
+        <select name="character-status" id="character-status" class="margin-lr border-radius" @change="getCharacters" v-model="store.searchKey">
             <option selected value="">Select Status</option>
             <option value="alive">Alive</option>
             <option value="dead">Dead</option>
