@@ -2,11 +2,11 @@ import {reactive} from 'vue';
 
 export const store = reactive({
     apiResults: [],
+    apiCharacters: [],
     loading: true,
+    searchKey: '',
     info: {
         url: 'https://rickandmortyapi.com/api/',
-        resultNumber: 20,
-        offsetNumber: 0,
         endpoints: {
             characters: 'character',
         }

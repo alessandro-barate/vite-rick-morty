@@ -20,8 +20,8 @@ methods: {
 
         this.store.loading = false;
 
-        // console.log(response);
-        // console.log(this.store.apiResults);
+        //  console.log(response);
+        //  console.log(this.store.apiResults);
         // console.log(this.store.info);
     });
     }

@@ -9,6 +9,12 @@ export default {
         FoundComponent,
         SearchComponent,
     },
+
+methods: {
+    ciao(){
+        console.log('ciao');
+    }
+}
 };
 </script>
 
@@ -18,7 +24,7 @@ export default {
             <div class="row">
                 <div class="col">
                     <h1 class="title">Rick and Morthy App</h1>
-                    <SearchComponent/>
+                    <SearchComponent @search="ciao"/>
                     <CardComponent/>
                     <FoundComponent/>
                 </div>
