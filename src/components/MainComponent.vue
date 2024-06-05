@@ -24,7 +24,7 @@ methods: {
             <div class="row">
                 <div class="col">
                     <h1 class="title">Rick and Morthy App</h1>
-                    <SearchComponent @search="search"/>
+                    <SearchComponent @search="getCharacters"/>
                     <CardComponent/>
                     <FoundComponent/>
                 </div>
