@@ -11,9 +11,6 @@ export default {
     },
 
 methods: {
-    ciao(){
-        console.log('ciao');
-    }
 }
 };
 </script>
@@ -24,7 +21,7 @@ methods: {
             <div class="row">
                 <div class="col">
                     <h1 class="title">Rick and Morthy App</h1>
-                    <SearchComponent @search="ciao"/>
+                    <SearchComponent @search=""/>
                     <CardComponent/>
                     <FoundComponent/>
                 </div>
